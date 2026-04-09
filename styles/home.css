@@ -1,0 +1,153 @@
+.page {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 0 20px;
+  background: var(--white);
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  gap: 22px;
+}
+
+h1 {
+  margin: 14px 0 20px;
+  font-size: 62px;
+  line-height: 1.05;
+}
+
+h2 {
+  margin: 12px 0;
+  font-size: 34px;
+}
+
+.viewed-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #2a5d94;
+  background: #e9f3ff;
+  font-weight: 600;
+}
+
+.nearby {
+  margin: 14px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.event-list {
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--white);
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.event-card:hover { background: #e1e5ec; }
+.event-card:hover .cta { background: #98ec1a; }
+
+.date-box {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fcfcfd;
+}
+
+.day {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.event-info h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.event-info p {
+  margin: 4px 0 8px;
+  color: var(--muted);
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border: 1px solid #d3d9e1;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.warning {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #d43c6c;
+  background: #ffedf3;
+}
+
+.cta {
+  padding: 11px 18px;
+  border: 1px solid #cfd6df;
+  border-radius: 9px;
+  background: #fff;
+  font-weight: 700;
+}
+
+.hero-image {
+  margin-top: 30px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.stadium-photo {
+  width: 100%;
+  height: 420px;
+  border-radius: 18px;
+  background: url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e") center / cover no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    margin: 12px auto;
+    padding: 0 12px;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  h1 { font-size: 44px; }
+
+  .event-card {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .cta {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .hero-image { margin: 0; }
+}

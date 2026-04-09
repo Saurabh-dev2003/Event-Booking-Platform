@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL Tickets - Listings</title>
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/listings.css">
+  <link rel="stylesheet" href="../styles/popup.css">
+</head>
+<body class="inner-page">
+  <header class="sub-topbar listing-head">
+    <div class="event-mini">
+      <div class="mini-img"></div>
+      <div>
+        <h2>Rajasthan Royals vs Mumbai Indians</h2>
+        <p>Tue · Apr 7 · 7:30 PM</p>
+        <small>ACA Stadium, Guwahati, Assam, India</small>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="listings-content">
+    <div class="warning-banner">Only 1% of tickets left</div>
+
+    <main class="listings-grid listings-screen">
+      <section class="stadium-map canvas-map-wrap">
+        <canvas id="stadiumCanvas" width="820" height="620" aria-label="Stadium seat map"></canvas>
+        <div class="price-tag t1">€34<br><small>2 left</small></div>
+        <div class="price-tag t2">€36<br><small>2 left</small></div>
+        <div class="price-tag t3">€40<br><small>4 left</small></div>
+        <div class="price-tag t4 dark">€13<br><small>Best price</small></div>
+        <div class="price-tag t5">€72<br><small>4 left</small></div>
+      </section>
+
+      <section class="listings-panel listings-right">
+        <div class="listings-top">
+          <h3 id="listingCount">9 listings</h3>
+          <div class="listing-controls">
+            <button class="filter-btn" aria-label="Filter listings">⚙</button>
+            <select>
+              <option>2 tickets</option>
+              <option>3 tickets</option>
+            </select>
+          </div>
+        </div>
+        <div id="listingCards"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="ticket-popup open" id="listingPopup" aria-hidden="false">
+    <section class="dim-bg"></section>
+    <section class="ticket-modal" role="dialog" aria-modal="true" aria-label="How many tickets">
+      <button class="modal-close" aria-label="Close popup">×</button>
+      <h1>How many tickets?</h1>
+      <label>
+        <select id="ticketCount">
+          <option>1 ticket</option>
+          <option selected>2 tickets</option>
+          <option>3 tickets</option>
+          <option>4 tickets</option>
+          <option>5 tickets</option>
+        </select>
+      </label>
+
+      <div class="toggle-box">
+        <div>
+          <strong>We want to be seated together</strong>
+          <p>We will find you the best available tickets based on your search criteria.</p>
+        </div>
+        <button id="seatToggle" class="toggle on" aria-label="Toggle seating">
+          <span></span>
+        </button>
+      </div>
+
+      <button class="continue-btn js-close-listing-popup" type="button">Continue</button>
+    </section>
+  </div>
+
+  <script src="../scripts/app.js"></script>
+</body>
+</html>

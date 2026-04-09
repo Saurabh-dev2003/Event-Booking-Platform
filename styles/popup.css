@@ -1,0 +1,121 @@
+.continue-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 11px 18px;
+  border: 1px solid #cfd6df;
+  border-radius: 9px;
+  text-align: center;
+  color: #fff;
+  background: var(--green);
+  border-color: var(--green);
+  font-weight: 700;
+}
+
+.continue-btn:hover {
+  background: var(--green-dark);
+}
+
+.ticket-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-popup.open { display: flex; }
+
+.dim-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.3);
+}
+
+.ticket-modal {
+  position: relative;
+  z-index: 1;
+  width: 470px;
+  padding: 24px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ticket-modal h1 {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 46px;
+}
+
+.ticket-modal select {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.toggle-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f6f8f9;
+}
+
+.toggle-box p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.toggle {
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+  border: 0;
+  border-radius: 999px;
+  background: #d1d5db;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.toggle.on { background: var(--green); }
+.toggle.on span { transform: translateX(20px); }
+
+body.has-modal-open .listings-content {
+  filter: blur(6px);
+  transition: filter 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+  .ticket-modal {
+    width: calc(100% - 24px);
+    padding: 18px;
+  }
+
+  .ticket-modal h1 { font-size: 30px; }
+}
